@@ -32,5 +32,10 @@ if __name__ == '__main__':
         line = line.strip()
         line = line.split(",")
         the_input = np.array([int(num) for num in line])
-    the_solution = solution(the_input, int(sys.argv[2]))
-    print(f"The solution is {the_solution}")
+    days = int(sys.argv[2])
+    if days <= 80:
+        the_solution = solution(the_input, days)
+        print(f"The solution is {the_solution}")
+    else:
+        print("This solution does not support days over 80")
+    
